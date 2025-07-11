@@ -1,439 +1,188 @@
-// const employees = [
-//   {
-//     id: 1,
-//     email: "employee1@example.com",
-//     password: "123",
-//     tasks: [
-//       {
-//         title: "Prepare Report",
-//         description: "Compile sales data for Q1.",
-//         date: "2025-06-01",
-//         category: "Reports",
-//         active: true,
-//         newTask: false,
-//         completed: false,
-//         failed: false,
-//       },
-//       {
-//         title: "Client Meeting",
-//         description: "Meet with ABC Corp to discuss requirements.",
-//         date: "2025-06-03",
-//         category: "Meetings",
-//         active: false,
-//         newTask: true,
-//         completed: false,
-//         failed: false,
-//       },
-//       {
-//         title: "Update CRM",
-//         description: "Ensure all contacts are up to date.",
-//         date: "2025-06-02",
-//         category: "CRM",
-//         active: false,
-//         newTask: false,
-//         completed: true,
-//         failed: false,
-//       },
-//     ],
-//   },
-//   {
-//     id: 2,
-//     email: "employee2@example.com",
-//     password: "123",
-//     tasks: [
-//       {
-//         title: "Design Mockups",
-//         description: "Create UI mockups for new landing page.",
-//         date: "2025-06-01",
-//         category: "Design",
-//         active: true,
-//         newTask: false,
-//         completed: false,
-//         failed: false,
-//       },
-//       {
-//         title: "Team Review",
-//         description: "Review tasks with design team.",
-//         date: "2025-06-03",
-//         category: "Review",
-//         active: false,
-//         newTask: true,
-//         completed: false,
-//         failed: false,
-//       },
-//       {
-//         title: "Fix Bugs",
-//         description: "Resolve UI bugs reported in sprint.",
-//         date: "2025-06-04",
-//         category: "Development",
-//         active: false,
-//         newTask: false,
-//         completed: true,
-//         failed: false,
-//       },
-//       {
-//         title: "Send Update",
-//         description: "Send project status email to PM.",
-//         date: "2025-06-05",
-//         category: "Communication",
-//         active: false,
-//         newTask: false,
-//         completed: false,
-//         failed: true,
-//       },
-//     ],
-//   },
-//   {
-//     id: 3,
-//     email: "employee3@example.com",
-//     password: "123",
-//     tasks: [
-//       {
-//         title: "Database Cleanup",
-//         description: "Remove outdated records.",
-//         date: "2025-06-02",
-//         category: "Maintenance",
-//         active: true,
-//         newTask: false,
-//         completed: false,
-//         failed: false,
-//       },
-//       {
-//         title: "Deploy Build",
-//         description: "Deploy v1.2.4 to production.",
-//         date: "2025-06-03",
-//         category: "Deployment",
-//         active: false,
-//         newTask: false,
-//         completed: true,
-//         failed: false,
-//       },
-//       {
-//         title: "Team Call",
-//         description: "Weekly sync with backend team.",
-//         date: "2025-06-04",
-//         category: "Meetings",
-//         active: false,
-//         newTask: true,
-//         completed: false,
-//         failed: false,
-//       },
-//       {
-//         title: "Code Review",
-//         description: "Review pull requests from team.",
-//         date: "2025-06-05",
-//         category: "Development",
-//         active: false,
-//         newTask: false,
-//         completed: true,
-//         failed: false,
-//       },
-//     ],
-//   },
-//   {
-//     id: 4,
-//     email: "employee4@example.com",
-//     password: "123",
-//     tasks: [
-//       {
-//         title: "Marketing Strategy",
-//         description: "Develop digital strategy for Q3.",
-//         date: "2025-06-01",
-//         category: "Marketing",
-//         active: true,
-//         newTask: false,
-//         completed: false,
-//         failed: false,
-//       },
-//       {
-//         title: "Keyword Research",
-//         description: "Analyze competitors' SEO strategy.",
-//         date: "2025-06-02",
-//         category: "SEO",
-//         active: false,
-//         newTask: false,
-//         completed: true,
-//         failed: false,
-//       },
-//       {
-//         title: "Ad Budget",
-//         description: "Plan budget for July ad campaigns.",
-//         date: "2025-06-03",
-//         category: "Advertising",
-//         active: false,
-//         newTask: true,
-//         completed: false,
-//         failed: false,
-//       },
-//     ],
-//   },
-//   {
-//     id: 5,
-//     email: "employee5@example.com",
-//     password: "123",
-//     tasks: [
-//       {
-//         title: "Customer Feedback",
-//         description: "Collect feedback from top clients.",
-//         date: "2025-06-02",
-//         category: "Support",
-//         active: false,
-//         newTask: false,
-//         completed: false,
-//         failed: true,
-//       },
-//       {
-//         title: "Internal Training",
-//         description: "Conduct training for new hires.",
-//         date: "2025-06-04",
-//         category: "HR",
-//         active: true,
-//         newTask: true,
-//         completed: false,
-//         failed: false,
-//       },
-//       {
-//         title: "Prepare Invoice",
-//         description: "Generate and send client invoice.",
-//         date: "2025-06-01",
-//         category: "Finance",
-//         active: false,
-//         newTask: false,
-//         completed: true,
-//         failed: false,
-//       },
-//     ],
-//   },
-// ];
-
 const employees = [
   {
     id: 1,
-    firstname: "Amit",
     email: "employee1@example.com",
-    password: "123",
+    password: "1234",
     tasks: [
       {
-        title: "Prepare Report",
-        description: "Compile sales data for Q1.",
-        date: "2025-06-01",
-        category: "Reports",
+        title: "Follow up with client",
+        description: "Call the client and discuss the renewal contract.",
+        date: "2025-07-09",
+        category: "Call",
         active: true,
-        newTask: false,
-        completed: false,
-        failed: false,
-      },
-      {
-        title: "Client Meeting",
-        description: "Meet with ABC Corp to discuss requirements.",
-        date: "2025-06-03",
-        category: "Meetings",
-        active: false,
         newTask: true,
         completed: false,
-        failed: false,
+        failed: false
       },
       {
-        title: "Update CRM",
-        description: "Ensure all contacts are up to date.",
-        date: "2025-06-02",
-        category: "CRM",
+        title: "Submit report",
+        description: "Submit the weekly report to manager.",
+        date: "2025-07-10",
+        category: "Report",
         active: false,
         newTask: false,
         completed: true,
-        failed: false,
+        failed: false
       },
-    ],
+      {
+        title: "Product feedback analysis",
+        description: "Review customer feedback and prepare a summary.",
+        date: "2025-07-08",
+        category: "Analysis",
+        active: false,
+        newTask: false,
+        completed: false,
+        failed: true
+      }
+    ]
   },
   {
     id: 2,
-    firstname: "Priya",
     email: "employee2@example.com",
-    password: "123",
+    password: "1234",
     tasks: [
       {
-        title: "Design Mockups",
-        description: "Create UI mockups for new landing page.",
-        date: "2025-06-01",
-        category: "Design",
+        title: "Training session",
+        description: "Attend internal customer service training.",
+        date: "2025-07-09",
+        category: "Training",
         active: true,
-        newTask: false,
-        completed: false,
-        failed: false,
-      },
-      {
-        title: "Team Review",
-        description: "Review tasks with design team.",
-        date: "2025-06-03",
-        category: "Review",
-        active: false,
         newTask: true,
         completed: false,
-        failed: false,
+        failed: false
       },
       {
-        title: "Fix Bugs",
-        description: "Resolve UI bugs reported in sprint.",
-        date: "2025-06-04",
-        category: "Development",
+        title: "CRM update",
+        description: "Update the CRM with recent client information.",
+        date: "2025-07-08",
+        category: "Database",
         active: false,
         newTask: false,
         completed: true,
-        failed: false,
-      },
-      {
-        title: "Send Update",
-        description: "Send project status email to PM.",
-        date: "2025-06-05",
-        category: "Communication",
-        active: false,
-        newTask: false,
-        completed: false,
-        failed: true,
-      },
-    ],
+        failed: false
+      }
+    ]
   },
   {
     id: 3,
-    firstname: "Rahul",
     email: "employee3@example.com",
-    password: "123",
+    password: "1234",
     tasks: [
       {
-        title: "Database Cleanup",
-        description: "Remove outdated records.",
-        date: "2025-06-02",
-        category: "Maintenance",
-        active: true,
-        newTask: false,
-        completed: false,
-        failed: false,
-      },
-      {
-        title: "Deploy Build",
-        description: "Deploy v1.2.4 to production.",
-        date: "2025-06-03",
-        category: "Deployment",
-        active: false,
-        newTask: false,
-        completed: true,
-        failed: false,
-      },
-      {
-        title: "Team Call",
-        description: "Weekly sync with backend team.",
-        date: "2025-06-04",
-        category: "Meetings",
-        active: false,
-        newTask: true,
-        completed: false,
-        failed: false,
-      },
-      {
-        title: "Code Review",
-        description: "Review pull requests from team.",
-        date: "2025-06-05",
-        category: "Development",
-        active: false,
-        newTask: false,
-        completed: true,
-        failed: false,
-      },
-    ],
-  },
-  {
-    id: 4,
-    firstname: "Sneha",
-    email: "employee4@example.com",
-    password: "123",
-    tasks: [
-      {
-        title: "Marketing Strategy",
-        description: "Develop digital strategy for Q3.",
-        date: "2025-06-01",
-        category: "Marketing",
-        active: true,
-        newTask: false,
-        completed: false,
-        failed: false,
-      },
-      {
-        title: "Keyword Research",
-        description: "Analyze competitors' SEO strategy.",
-        date: "2025-06-02",
-        category: "SEO",
-        active: false,
-        newTask: false,
-        completed: true,
-        failed: false,
-      },
-      {
-        title: "Ad Budget",
-        description: "Plan budget for July ad campaigns.",
-        date: "2025-06-03",
-        category: "Advertising",
-        active: false,
-        newTask: true,
-        completed: false,
-        failed: false,
-      },
-    ],
-  },
-  {
-    id: 5,
-    firstname: "Vikram",
-    email: "employee5@example.com",
-    password: "123",
-    tasks: [
-      {
-        title: "Customer Feedback",
-        description: "Collect feedback from top clients.",
-        date: "2025-06-02",
+        title: "Resolve ticket #453",
+        description: "Resolve issue regarding billing error.",
+        date: "2025-07-07",
         category: "Support",
         active: false,
         newTask: false,
         completed: false,
-        failed: true,
+        failed: true
       },
       {
-        title: "Internal Training",
-        description: "Conduct training for new hires.",
-        date: "2025-06-04",
-        category: "HR",
+        title: "Team meeting",
+        description: "Join team sync-up to discuss KPIs.",
+        date: "2025-07-09",
+        category: "Meeting",
         active: true,
         newTask: true,
         completed: false,
-        failed: false,
+        failed: false
       },
       {
-        title: "Prepare Invoice",
-        description: "Generate and send client invoice.",
-        date: "2025-06-01",
-        category: "Finance",
+        title: "Feedback form check",
+        description: "Verify client feedback forms from last week.",
+        date: "2025-07-05",
+        category: "Review",
         active: false,
         newTask: false,
         completed: true,
-        failed: false,
-      },
-    ],
+        failed: false
+      }
+    ]
   },
+  {
+    id: 4,
+    email: "employee4@example.com",
+    password: "1234",
+    tasks: [
+      {
+        title: "Appointment confirmation",
+        description: "Confirm schedule for 3 pending appointments.",
+        date: "2025-07-06",
+        category: "Call",
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false
+      },
+      {
+        title: "Prepare slides",
+        description: "Make presentation for upcoming demo.",
+        date: "2025-07-10",
+        category: "Presentation",
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false
+      }
+    ]
+  },
+  {
+    id: 5,
+    email: "employee5@example.com",
+    password: "1234",
+    tasks: [
+      {
+        title: "Daily summary email",
+        description: "Send summary email to all team members.",
+        date: "2025-07-09",
+        category: "Email",
+        active: true,
+        newTask: false,
+        completed: false,
+        failed: false
+      },
+      {
+        title: "Client survey analysis",
+        description: "Analyze client satisfaction survey results.",
+        date: "2025-07-08",
+        category: "Analysis",
+        active: false,
+        newTask: false,
+        completed: true,
+        failed: false
+      },
+      {
+        title: "Demo call with lead",
+        description: "Call with potential client to showcase services.",
+        date: "2025-07-10",
+        category: "Call",
+        active: true,
+        newTask: true,
+        completed: false,
+        failed: false
+      }
+    ]
+  }
+];
+
+const admin = [
+  {
+    id: 1,
+    email: "admin@example.com",
+    password: "1234"
+  }
 ];
 
 
-const admin = {
-  id: 1,
-  email: "admin@example.com",
-  password: "123",
-};
 
-
-export const setLocalStorage = () => {
+export const setLocalsStorage = () => {
     localStorage.setItem('employees', JSON.stringify(employees))
     localStorage.setItem('admin', JSON.stringify(admin))
 }
 
 export const getLocalStorage = () => {
-    const employees = JSON.parse(localStorage.getItem('employees'))
-    const admin = JSON.parse(localStorage.getItem('admin'))
-    return {employees, admin}
+  const employees =  JSON.parse(localStorage.getItem('employees'))
+  const admin =  JSON.parse(localStorage.getItem('admin'))
+  console.log(employees, admin)
 }

@@ -3,14 +3,14 @@ import Header from "../other/Header";
 import CreateTask from "../other/CreateTask";
 import AllTask from "../other/AllTask";
 
-const Admin = () => {
+const Admindashboard = () => {
   return (
     <div className="h-screen w-full p-10">
       <Header />
-       <CreateTask />
-       <AllTask />
+      <CreateTask />
+      <AllTask />
     </div>
   );
 };
 
-export default Admin;
+export default Admindashboard;

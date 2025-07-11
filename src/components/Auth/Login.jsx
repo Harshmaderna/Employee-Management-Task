@@ -1,46 +1,41 @@
-import { useState } from "react";
+import React, { useState } from "react";
 
-const Login = ({ handleLogin }) => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-
-  const submitHandler = (e) => {
-    e.preventDefault();
-    handleLogin(email, password);
-    setEmail("");
-    setPassword("");
+const Login = () => {
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
+  const Submithandler = (e) => {
+    e.preventDefault()
+    console.log(email)
+    console.log(password)
+   setEmail("")
+   setPassword("")
   };
-
   return (
-    <div className="h-screen w-screen flex items-center justify-center">
-      <div className="border-1 border-emerald-600 p-10 rounded-xl">
+    <div className="flex h-screen w-screen items-center justify-center">
+      <div className="border-2 border-emerald-600 p-20 rounded-md">
         <form
           onSubmit={(e) => {
-            submitHandler(e);
+            Submithandler(e)
           }}
-          className="flex flex-col items-center justify-center gap-2px"
+          className="flex flex-col text-white items-center justify-center"
         >
-          <input
-            value={email}
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-            required
-            className="border-2 border-emerald-600 py-3 px-5 text-xl rounded-full outline-none bg-transparent placeholder: text-white"
+          <input  value={email}
+          onChange={(e) => {
+            setEmail(e.target.value)
+          }}
+            className="border-2 border-emerald-600 py-4  outline-none bg-transparent px-5 text-xl rounded-full placeholder:text-white"
             type="email"
             placeholder="enter your email"
           />
-          <input
-            value={password}
-            onChange={(e) => {
-              setPassword(e.target.value);
-            }}
-            required
-            className="mt-3 border-2 border-emerald-600 py-3 px-5 text-xl rounded-full outline-none bg-transparent placeholder: text-white"
+          <input value={password}
+          onChange={(e) => {
+            setPassword(e.target.value)
+          }}
+            className="border-2 border-emerald-600 py-4  outline-none bg-transparent px-5 text-xl rounded-full placeholder:text-white mt-4"
             type="password"
             placeholder="enter your password"
           />
-          <button className="border-2 border-emerald-600 bg-emerald-600 py-3 px-5 text-xl text-white mt-5 rounded-full outline-none cursor-pointer">
+          <button className=" bg-emerald-600 py-4  outline-none  px-5 text-xl rounded-full placeholder:text-white cursor-pointer mt-4">
             Login
           </button>
         </form>

@@ -1,14 +1,16 @@
-
-body{
-  background-color: #111;
-  
-}
 @import "tailwindcss";
 
-#task-list::-webkit-scrollbar{
+
+
+body{
+  background-color: black;
+
+}
+
+#tasklist::-webkit-scrollbar{
   display: none;
 }
-#task-list::-webkit-scrollbar-thumb{
-  background-color: rgb(143, 143, 143);
-  border-radius: 50px;
+#allTask::-webkit-scrollbar{
+  display: none;
 }
+
